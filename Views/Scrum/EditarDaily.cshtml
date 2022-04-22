@@ -1,0 +1,102 @@
+@model Desafio.DTO.DailyDTO
+
+@{
+    ViewData["Title"] = "Editar daily";
+}
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Editar daily</h1>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+        <form asp-controller="Daily" asp-action="Atualizar">
+            <input type="hidden", asp-for="Id">
+
+            <div class=row>
+
+                <div class="form-group col-md-5">
+                    <label asp-for="ModuloId">Módulo</label>
+                    <select class="form-control" asp-for="ModuloId" asp-items='@(new SelectList(@ViewBag.Modulos, "Id", "Nome"))'></select>
+                </div>
+
+                <div class="form-group col-md-5">
+                    <label asp-for="StarterId">Starter</label>
+                    <select class="form-control" asp-for="StarterId" asp-items='@(new SelectList(@ViewBag.Starters, "Id", "Nome"))'></select>
+                </div>
+                
+                
+                <div class="form-group col-md-2">
+                <label asp-for="Presenca">Presença</label>
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="Presenca" value="1">
+                        <label class="form-check-label" asp-for="Presenca">Presente</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="Presenca" value="0">
+                        <label class="form-check-label" asp-for="Presenca">Ausente</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="form-group col-md-3">
+                    <label asp-for="Data">Data</label>
+                    <input type="date" class="form-control" asp-for="Data">
+                    <span asp-validation-for="Data"></span><br>
+                </div>
+
+                <div class="form-group col-md-9">
+                    <label asp-for="Impedimento">Impedimentos</label>
+                    <input type="text" class="form-control" asp-for="Impedimento">
+                </div>    
+            </div>
+
+            <div class="row">
+            
+                <div class="col">
+                    <label asp-for="Feito">Atividades feitas ontem</label>
+                    <textarea class="form-control" type="text" asp-for="Feito"></textarea>
+                    <span asp-validation-for="Feito"></span><br>
+                </div>
+
+                <div class="col">
+                    <label asp-for="Fazendo">Atividades que fará hoje</label>
+                    <textarea class="form-control" type="text" asp-for="Fazendo"></textarea>
+                    <span asp-validation-for="Fazendo"></span><br>
+                </div>
+            </div>
+
+            <button class="btn btn-success">Atualizar</button>
+
+        </form>
+        <hr>
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+        
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+    <div class="p-3">
+      <h5>Title</h5>
+      <p>Sidebar content</p>
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+

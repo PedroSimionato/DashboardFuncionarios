@@ -1,0 +1,72 @@
+<!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a asp-controller="Home" asp-action="Index" class="brand-link">
+      <img src="~/AdminLte/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">GFT</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+             <a asp-controller="Adm" asp-action="Index" class="nav-link">
+              <i class="fas fa-home"></i>
+              <p>
+                Admin Home
+              </p>
+            </a>
+            <a asp-controller="Adm" asp-action="Programas" class="nav-link">
+              <i class="fas fa-book-open"></i>
+              <p>
+                Trumas
+              </p>
+            </a>
+            <a asp-controller="Adm" asp-action="Starters" class="nav-link">
+              <i class="far fa-address-card"></i>
+              <p>
+                Starters
+              </p>
+            </a>
+            <a asp-controller="Adm" asp-action="Grupos" class="nav-link">
+              <i class="fas fa-users"></i>
+              <p>
+                Grupos
+              </p>
+            </a>
+            <a asp-controller="Adm" asp-action="Modulos" class="nav-link">
+              <i class="fas fa-clipboard-list"></i>
+              <p>
+                Módulos
+              </p>
+            </a>
+            <a asp-controller="Adm" asp-action="Projetos" class="nav-link">
+              <i class="fas fa-desktop"></i>
+              <p>
+                Projetos
+              </p>
+            </a>
+            <a asp-controller="Scrum" asp-action="Dailys" class="nav-link">
+              <i class="far fa-calendar-alt"></i>
+              <p>
+                Daily
+              </p>
+            </a>
+            <a asp-controller="Adm" asp-action="Tecnologias" class="nav-link">
+              <i class="fab fa-java"></i>
+              <p>
+                Tecnologias
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
